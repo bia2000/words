@@ -1,0 +1,63 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="cu-bar search bg-white search-box">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索英语单词" confirm-type="search" bindconfirm="handleSearch"></input>
+    </view>
+  </view>
+  <view class="selected-box flex solid-bottom padding justify-between">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text>
+      {{level}}
+    </view>
+    <view class="action">
+      <button class="cu-btn round df bg-purple light shadow " bindtap="showModal" data-target="RadioModal">
+        单词书
+      </button>
+    </view>
+  </view>
+  <view class="cu-modal {{modalName=='RadioModal'?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog" catchtap>
+      <radio-group class="block">
+        <view class="cu-list menu text-left">
+          <view class="cu-item" wx:for="{{levels}}" wx:key="*this">
+            <label class="flex justify-between align-center flex-sub">
+              <view class="flex-sub" data-level="{{item}}" bindtap="handleLevel">{{item}}</view>
+              <radio class="round"></radio>
+            </label>
+          </view>
+        </view>
+      </radio-group>
+      <button class="action bg-green" bindtap="hideModal">确定</button>
+    </view>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-purple light lg shadow margin-left" bindtap="showModal" data-target="DialogModal2">签到</button>
+  </view>
+  <view class="cu-modal {{modalName=='DialogModal2'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示信息</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      签到成功！
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub text-green " bindtap="hideModal">
+        <text class="cuIcon-moneybag"></text>付款补签</view>
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">取消</view>
+      <view class="action margin-0 flex-sub text-green solid-left" bindtap="hideModal">签到成功</view>
+    </view>
+  </view>
+</view>
+  <view class="btn-box">
+      <view class="btn-item" bindtap="toLearn">Learn</view>
+    <navigator url="/pages/review/index" open-type="navigate">
+      <view class="btn-item" bindtap="toReview">Review</view>
+    </navigator>
+  </view>
+</view>

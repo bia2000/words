@@ -1,0 +1,25 @@
+<!-- pages/wordDetail/index.wxml -->
+<view class="wordDetail text-center" >
+  <view class="cu-bar search bg-white search-box" wx:if="{{type}}">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索英语单词" confirm-type="search" bindconfirm="handleSearch"></input>
+    </view>
+  </view>
+  <view wx:if="{{words}}" wx:key="*this">
+    <view class="text-bold text-xxxl margin-top-lg">{{words}}</view>
+    <view class="margin">/{{usphone}}/</view>
+    <block wx:for="{{trans}}" wx:key="*this">
+    <view class="margin text-bold">{{item.pos}}. {{item.tranCn}}</view>
+  </block>
+    <view class="margin-top-xxl">例句</view>
+    <block wx:for="{{sentence.sentences}}" wx:key="*this">
+    <view class="margin-lg">{{item.sContent}}</view>
+    <view class="margin-lg">{{item.sCn}}</view>
+  </block>
+  </view>
+  <view hidden="{{words}}" class="text-xxl text-bold margin">没有搜索到该单词</view>
+  <view hidden="{{type==1}}" class="cu-btn round btn-item bg-blue margin-top-xl" bindtap="toNext">
+    下一词
+  </view>
+</view>

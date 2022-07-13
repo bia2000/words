@@ -1,0 +1,90 @@
+.calendar{
+  width: 96%;
+  height: 600rpx;
+  background-color: antiquewhite;
+  margin: 0 auto;
+  padding: 10rpx;
+  border-radius: 20px 20px 20px 20px;
+  margin-top: 20rpx;
+}
+.top{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.top text{
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.middle{
+  display: flex;
+}
+.middle_num{
+  width: 14%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calen{
+  display: flex;
+  height: 400rpx;
+  flex-wrap: wrap; /* 必要的时候拆行或拆列。 */
+}
+.calen_blank{
+  width: 14%;
+  height: 20%;
+  background-color: antiquewhite;
+}
+.calen_num{
+  width: 14%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+  background-color:navajowhite;
+  width: 14%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+ 
+button{
+  position: relative;
+  margin-top: 10%;
+  border-radius: 20px 20px 20px 20px;
+}
+ 
+.date{
+  position: relative;
+  left: 3%;
+  margin-top: 130rpx;
+  width: 30%;
+  height: 125rpx;
+  text-align: center;
+  background-color: #ccabd8;
+  border-radius: 20px 20px 20px 20px;
+}
+.date .num{
+  color:red;
+  font-weight: 700;
+}
+.date text{
+  font-size: 32rpx;
+}
+ 
+.fighting{
+  position: relative;
+  left: 65%;
+  margin-top: -119rpx;
+  width: 30%;
+  height: 125rpx;
+  text-align: center;
+  color: red;
+  background-color: #86e3ce;
+  border-radius: 20px 20px 20px 20px;
+  line-height: 125rpx;
+}

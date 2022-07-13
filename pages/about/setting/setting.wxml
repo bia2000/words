@@ -1,0 +1,49 @@
+<!-- <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="cu-item {{menuArrow?'arrow':''}}">
+      <navigator class="content" hover-class="none" url="../test/list" open-type="redirect">
+        <text class="text-grey">提醒设置</text>
+      </navigator>
+    </view>
+</view> -->
+<view class="setting-item">
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius ">
+    <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-grey">提醒设置</text>
+        </view>
+      </view>
+    <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-grey">账号设置</text>
+        </view>
+      </view>
+    <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-grey">清除缓存</text>
+        </view>
+      </view>
+  </view>
+  <view class="setting-item2">
+    <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-grey">关于我们</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="setting-item3">
+    <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+      <!-- <view class="cu-item arrow">
+        <navigator class="content" bindtap="loginout">
+          <text class="text-grey">退出登录</text>
+        </navigator>
+      </view> -->
+      <view class="cu-item arrow">
+        <view class="content"  bindtap="loginout">
+          <text class="text-grey">退出登录</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

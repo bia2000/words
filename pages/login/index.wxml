@@ -1,0 +1,51 @@
+<view class="v1">
+   
+  <!-- v2父容器  子view使用绝对布局 -->
+    <view class="v2">
+        <view class="dltext">登录</view>
+     
+       
+    <!-- 手机号 -->
+        <view class="phoneCs">
+    <view class="ph">用户名</view>
+            <input placeholder="请输入手机号" />  
+    </view>
+     
+       
+        <view class=passwordCs">
+    <view class="ps">密码</view>
+            <input placeholder="请输入密码" type="password"/>
+      <!--       <image src="/pages/images/tabbar/home.png" class="eye"></image> -->
+          </view>
+     
+       
+    <!-- 注册 和忘记密码  -->
+        <view class="zhuce">
+            <navigator>立即注册</navigator>
+            <navigator>忘记密码?</navigator>
+          </view>
+     
+       
+    <!-- 登录按钮 -->
+        <view class="denglu">
+            <button class="btn-dl" bindtap="bindViewTap" type="primary">登录</button>
+          </view>
+     
+       
+    <!-- 协议区  xieyi -->
+        <view class="xieyi">
+            <checkbox class="isXY"></checkbox>
+            <view class="text-xy">同意小程序的《使用协议》</view>
+          </view>
+     
+  </view>
+   
+  <!-- 提示框  使用以下方式登录 -->
+  <view class="v3">
+        <view class="line"></view>
+        <view class="lText">您还可以使用以下方式登录</view>
+          </view>
+    <view class="deng"><button  type="primary" bindtap="bindViewTap">
+        微信一键登录</button></view>
+   
+</view>

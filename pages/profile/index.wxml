@@ -1,0 +1,53 @@
+<!--pages/profile/index.wxml-->
+
+ 
+<view bindtap="bindViewTap" class="userinfo">
+  <view class="userinfo-avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data class="userinfo-nickname" type="userNickName"></open-data>
+</view> 
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-service text-mauve"> </text>
+      
+      <button class="buto" open-type="contact">
+        <text class="text-grey">联系客服</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/note/index/index" hover-class="none">
+      <text class="cuIcon-settings text-green"></text>
+      <text class="text-grey">做笔记</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/setting/setting" hover-class="none">
+      <text class="cuIcon-settings text-green"></text>
+      <text class="text-grey">设置</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content" bindtap="showMessage">
+      <text class="cuIcon-message text-red"></text>
+      <text class="text-grey">消息中心</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <button class="buto" open-type="feedback">
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/login/me" hover-class="none">
+      <text class="cuIcon-creativefill text-orange"></text>
+      <text class="text-grey">用户登录</text>
+    </navigator>
+  </view>
+</view>
+<view class="cu-tabbar-height"></view>

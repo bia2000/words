@@ -1,0 +1,16 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="text-center">
+    <view data-id="{{words[num]}}" class="text-xxxl text-bold">{{words}}</view>
+    <view>{{usphone}}</view>
+  </view>
+  <view class="margin-top-xl">
+    <view>
+      <view class="cu-btn round  bg-blue btn-item" bindtap="toDetail">模糊</view>
+    </view>
+    <view>
+      <view class="cu-btn round  bg-blue btn-item margin-top" bindtap="knowWord">认识</view>
+    
+    </view>
+  </view>
+</view>
