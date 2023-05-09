@@ -1,0 +1,10 @@
+<view class="cu-list menu card-menu">
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{words}}" wx:key="index" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+        <view class="content">
+            <view class="cu-item arrow" data-id="{{item.wordId}}" bindtap="getInfo">{{item.word}}</view>
+        </view>
+        <view class="move">
+            <view class="bg-red" data-id="{{item._id}}" bindtap="delete">删除</view>
+        </view>
+    </view>
+</view>

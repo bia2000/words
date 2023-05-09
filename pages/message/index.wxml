@@ -1,0 +1,43 @@
+<view class="text-center">
+  <block wx:for="{{message}}" wx:key="*this">
+
+    <view class="margin-top">{{item.time}}</view>
+    <view class="bg-white margin item">
+      <image src="{{item.img}}"></image>
+      <view class="text-bold text-xl margin">
+        {{item.title}}
+      </view>
+      <view class="text-lg margin">
+      {{item.content}}
+      </view>
+    </view>
+  </block>
+</view>
+<!-- <view class="time">11:00</view>
+ <view class="mon">
+ <view id='hook1' class="p  p01 {{scrollindex==0?'active':''}}" style='background:white'  bindtouchstart="scrollTouchStart" bindtouchmove='scrollTouchMove'  bindtouchend="scrollTouchEnd">
+   <view>
+     <view>
+        <view>
+        <image class="card" src="/image/banner/C.png"></image>
+        </view>
+        <view style="color: black; font-family:sans-serif;font-size:15px;">给用户们的一封信
+        </view>
+      </view>
+    </view>
+ </view>
+ </view>
+ <view class="mon">
+ <view class="time">12:00</view>
+ <view id='hook1' class="p  p01 {{scrollindex==0?'active':''}}" style='background:white'  bindtouchstart="scrollTouchStart" bindtouchmove='scrollTouchMove'  bindtouchend="scrollTouchEnd">
+   <view>
+     <view>
+        <view>
+        <image class="card" src="/image/banner/R.png"></image>
+        </view>
+        <view>关于最近更新状况的详细说明
+        </view>
+      </view>
+    </view>
+ </view> -->
+<!-- </view> -->

@@ -1,0 +1,9 @@
+.setting-item{
+    margin-top: 20rpx;
+}
+.setting-item2{
+    margin-top: 40rpx;
+}
+.setting-item3{
+    margin-top: 40rpx;
+}

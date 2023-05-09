@@ -1,0 +1,266 @@
+<<<<<<< HEAD
+<!-- pages/profile/index.wxml
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-list menu card-menu">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/calendar/index" hover-class="none">
+        <view class="content">
+          <text class="cuIcon-github text-grey"></text>
+          <text class="text-grey">每日签到</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="margin cu-list menu card-menu ">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/wordList/index?type=1" hover-class="none">
+        <text class="cuIcon-settings text-green"></text>
+        <text class="text-grey">已学习</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/wordList/index" hover-class="none">
+        <view class="content">
+          <text class="cuIcon-message text-red"></text>
+          <text class="text-grey">未学习</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/data/index" hover-class="none">
+        <view class="content">
+          <text class="cuIcon-message text-red"></text>
+          <text class="text-grey">数据统计</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/test/list" hover-class="none">
+        <text class="cuIcon-creativefill text-orange"></text>
+        <text class="text-grey">Bug测试</text>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="cu-tabbar-height"></view> -->
+
+<!--pages/overview/overview.wxml-->
+
+<view class="bgWrapper"></view>
+
+<view class="contentWarpper">
+    <!-- <view class="contentTitle">单词书</view> -->
+    <view class="contentCard">
+        <view class="title">单词书</view>
+        <view class="cardTop">
+            <view class="bookWrapper">
+                <view class="book" bindtap="showBookList">
+                    <view class="name">{{bookId}}</view>
+                </view>
+                <view class="tips">点击词书可以进行切换哦</view>
+            </view>
+            <view class="dataWrapper">
+                <view class="dataItem" hover-class="wasTaped" data-type="getBkLearnedWord" bindtap="getWordList">
+                    <view class="dataName">已学习</view>
+                    <view class="dataValue">{{reviewWord}}<text class="unit">词</text></view>
+                </view>
+                <view class="dataItem" hover-class="wasTaped" data-type="getBkMasteredWord" bindtap="getWordList">
+                    <view class="dataName">已掌握</view>
+                    <view class="dataValue">{{learnedWord}}<text class="unit">词</text></view>
+                </view>
+                <view class="dataItem" hover-class="wasTaped" data-type="getBkUnlearnedWord" bindtap="getWordList">
+                    <view class="dataName">待学习</view>
+                    <view class="dataValue">{{needWord}}<text class="unit">词</text></view>
+                </view>
+                <view class="dataItem" hover-class="wasTaped" data-type="getBkWord" bindtap="getWordList">
+                    <view class="dataName">总词量</view>
+                    <view class="dataValue">{{allWord}}<text class="unit">词</text></view>
+                </view>
+            </view>
+        </view>
+        <view class="cardBottom">
+            <progress class="learnProgress" percent="{{bkLearnData.learn / bkDetail.total * 100}}" border-radius="6rpx"
+                stroke-width="12rpx" backgroundColor="#f0f0f0" activeColor="#fd6802" active-mode="backwards"></progress>
+            <view class="progressNum">
+                <view class="learned">已学习: {{bkLearnData.learn}}</view>
+                <view class="total">总词量: {{bkDetail.total}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="contentWarpper">
+    <!-- <view class="contentTitle">总览</view> -->
+    <view class="contentCard">
+        <view class="title">总览</view>
+        <view class="dataWrapper forAllData">
+            <view class="dataItem" hover-class="wasTaped" data-type="today" bindtap="getWordList">
+                <view class="dataName">
+                    <view class="dot"></view>今日学习&复习
+                </view>
+                <view class="dataValue">{{todayLearnData.learn + todayLearnData.review}}<text class="unit">词</text></view>
+            </view>
+            <view class="dataItem" hover-class="wasTaped" data-type="getLearnedWord" bindtap="getWordList">
+                <view class="dataName">
+                    <view class="dot"></view>累计学习
+                </view>
+                <view class="dataValue">{{allLearn}}<text class="unit">词</text></view>
+            </view>
+            <view class="dataItem" hover-class="wasTaped" data-type="getReviewWord" bindtap="getWordList">
+                <view class="dataName">
+                    <view class="dot"></view>复习中
+                </view>
+                <view class="dataValue">{{allLearnData.learn-allLearnData.master}}<text class="unit">词</text></view>
+            </view>
+            <view class="dataItem" hover-class="wasTaped" data-type="getMasteredWord" bindtap="getWordList">
+                <view class="dataName">
+                    <view class="dot"></view>已掌握
+                </view>
+                <view class="dataValue">{{allLearnData.master}}<text class="unit">词</text></view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+<view class="contentWarpper">
+    <!-- <view class="contentTitle">历史</view> -->
+    <view class="contentCard">
+        <view class="title">历史</view>
+        <view class="eccanvasContainer">
+            <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+        </view>
+        <view class="dataWrapper forDailySum">
+            <view class="dataItem">
+                <view class="dataName">日期</view>
+                <view class="dataValue date">{{selectedDay.time}}</view>
+            </view>
+            <view class="dataItem">
+                <view class="dataName">学习</view>
+                <view class="dataValue">{{selectedDay.learn}}<text class="unit">词</text></view>
+            </view>
+            <view class="dataItem">
+                <view class="dataName">复习</view>
+                <view class="dataValue">{{selectedDay.review}}<text class="unit">词</text></view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="bottom"></view>
+
+<page-container show="{{isChangingBook}}" duration="{{1500}}" overlay="{{true}}" position="bottom" round="{{true}}" bind:afterleave="endChange" bind:enter="onEnter">
+    <scroll-view class="changeBookWrapper" scroll-y="{{true}}">
+        <view class="book" wx:for="{{allBkData}}" hover-class ='wasTaped' wx:key="index" data-index="{{index}}" bindtap="changeWordBook">
+            <view class="bookCover">
+                <view class="name">{{item.name}}</view>
+            </view>
+            <view class="info">
+                <view class="bookName">{{item.name}}</view>
+                <view class="des">{{item.description}}</view>
+                <view class="total">词汇量 <text class="num">{{item.total}}</text></view>
+            </view>
+        </view>
+    </scroll-view>
+</page-container>
+
+
+
+
+<!-- <button class="resetbtn" type="primary" bindtap="getControl">getControl</button> -->
+
+<!-- <button class="resetbtn" type="primary" bindtap="testAddLearningRecord">sendData</button> -->
+<!-- <button class="resetbtn" type="primary" bindtap="getBasicLearningData">getBasic</button> -->
+=======
+
+<view class="contentWarpper">
+  <!-- <view class="contentTitle">单词书</view> -->
+  <view class="contentCard">
+    <view class="title">单词书</view>
+    <view class="cardTop">
+      <view class="bookWrapper">
+        <view class="book" bindtap="showBookList">
+          <view class="name">{{bookId}}</view>
+        </view>
+      </view>
+      <view class="dataWrapper">
+        <view class="dataItem" hover-class="wasTaped" data-type="1" bindtap="getWordList">
+          <view class="dataName">已学习</view>
+          <view class="dataValue">{{reviewWord}}<text class="unit">词</text></view>
+        </view>
+        <view class="dataItem" hover-class="wasTaped" data-type="2" bindtap="getWordList">
+          <view class="dataName">已掌握</view>
+          <view class="dataValue">{{learnedWord}}<text class="unit">词</text></view>
+        </view>
+        <view class="dataItem" hover-class="wasTaped" data-type="3" bindtap="getWordList">
+          <view class="dataName">待学习</view>
+          <view class="dataValue">{{needWord}}<text class="unit">词</text></view>
+        </view>
+        <view class="dataItem" hover-class="wasTaped" data-type="4" bindtap="getWordList">
+          <view class="dataName">总词量</view>
+          <view class="dataValue">{{allWord}}<text class="unit">词</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="cardBottom">
+      <progress class="learnProgress" percent="{{reviewWord / allWord * 100}}" border-radius="6rpx" stroke-width="12rpx" backgroundColor="#f0f0f0" activeColor="#fd6802" active-mode="backwards"></progress>
+      <view class="progressNum">
+        <view class="learned">已学习: {{reviewWord}}</view>
+        <view class="total">总词量: {{allWord}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="contentWarpper">
+  <!-- <view class="contentTitle">总览</view> -->
+  <view class="contentCard">
+    <view class="title">总览</view>
+    <view class="dataWrapper forAllData">
+      <view class="dataItem" hover-class="wasTaped" data-type="today" bindtap="getWordList">
+        <view class="dataName">
+          <view class="dot"></view>今日学习&复习
+        </view>
+        <view class="dataValue">{{dayWord}}<text class="unit">词</text></view>
+      </view>
+      <view class="dataItem" hover-class="wasTaped" data-type="getLearnedWord" >
+        <view class="dataName">
+          <view class="dot"></view>累计学习
+        </view>
+        <view class="dataValue">{{allLearn}}<text class="unit">词</text></view>
+      </view>
+      <view class="dataItem" hover-class="wasTaped" data-type="getReviewWord">
+        <view class="dataName">
+          <view class="dot"></view>复习中
+        </view>
+        <view class="dataValue">{{allReview}}<text class="unit">词</text></view>
+      </view>
+      <view class="dataItem" hover-class="wasTaped" data-type="getMasteredWord">
+        <view class="dataName">
+          <view class="dot"></view>已掌握
+        </view>
+        <view class="dataValue">{{allLearned}}<text class="unit">词</text></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="contentWarpper">
+  <view class="contentCard">
+    <view class="container">
+    <view class="title">历史</view>
+      <view class='echart_wrap'>
+        <ec-canvas id="mychart" type="2d" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+
+<view class="bottom"></view>
+>>>>>>> a6b7aee (卷卷背单词实现)

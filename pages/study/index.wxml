@@ -1,0 +1,42 @@
+<view class="margin">
+  <view class="input-area">
+    <text class="iconfont icon-close" hidden="{{hideClearIcon}}" bindtap='onTapClose'></text>
+    <view class="textarea-wrap">
+      <textarea placeholder='请输入要翻译的文本' placeholder-style='color: #8995a1'  bindinput='onInput' bindconfirm='onConfirm' bindblur='onConfirm'  value="{{query}}"></textarea>
+    </view>
+    
+    <view class="text-area">
+      <view class="text-title">译文</view>
+      <view class="text-result" wx:for="{{result}}" wx:key="index">
+        <text user-select="true">{{item.dst}}</text>
+      </view>
+    </view>
+  </view>
+</view> 
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/calendar/index">
+      <text class="cuIcon-calendar text-orange"></text>
+      <text class="text-grey">打卡日历</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/message/index">
+      <text class="cuIcon-message text-green"></text>
+      <text class="text-grey">消息中心</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/note/index/index">
+      <text class="cuIcon-post text-red"></text>
+      <text class="text-grey">做笔记</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/newWordList/index">
+      <text class="cuIcon-read text-purple"></text>
+      <text class="text-grey">生词本</text>
+    </navigator>
+  </view>
+</view>
+<view class="cu-tabbar-height"></view>

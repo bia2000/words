@@ -1,0 +1,16 @@
+/* pages/wordDetail/index.wxss */
+.btn-item{
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.text-xxxl{
+  font-size: 60rpx;
+}
+.margin-top-xxl{
+  margin: 0 auto;
+  text-align: left;
+  width: 700rpx;
+  margin-top: 100rpx;
+  border-bottom: 4rpx dotted #333;
+}

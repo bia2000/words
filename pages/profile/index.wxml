@@ -1,0 +1,89 @@
+<<<<<<< HEAD
+<!--pages/profile/index.wxml-->
+
+ 
+<view bindtap="bindViewTap" class="userinfo">
+  <view class="userinfo-avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data class="userinfo-nickname" type="userNickName"></open-data>
+</view> 
+=======
+<view class="login" wx:if="{{!(userInfo&&userInfo.avatarUrl)}}">
+  <button class="buto_login" bindtap="getUserProfile">授权登陆</button>
+</view>
+
+<view wx:if="{{userInfo&&userInfo.avatarUrl}}" bindtap="bindViewTap" class="userinfo">
+  <view class="userinfo-avatar">
+    <image class="userinfo-avatar1" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <text >{{userInfo.nickName}}</text>
+</view>
+>>>>>>> a6b7aee (卷卷背单词实现)
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-service text-mauve"> </text>
+      
+      <button class="buto" open-type="contact">
+        <text class="text-grey">联系客服</text>
+      </button>
+    </view>
+  </view>
+<<<<<<< HEAD
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/note/index/index" hover-class="none">
+      <text class="cuIcon-settings text-green"></text>
+      <text class="text-grey">做笔记</text>
+=======
+  <view class="cu-item arrow"  wx:if="{{userInfo&&userInfo.avatarUrl}}">
+    <navigator class="content" url="/pages/about/editor/index" hover-class="none">
+      <text class="cuIcon-mark text-red"></text>
+      <text class="text-grey">编辑个人资料</text>
+>>>>>>> a6b7aee (卷卷背单词实现)
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/setting/setting" hover-class="none">
+      <text class="cuIcon-settings text-green"></text>
+      <text class="text-grey">设置</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+<<<<<<< HEAD
+    <view class="content" bindtap="showMessage">
+      <text class="cuIcon-message text-red"></text>
+      <text class="text-grey">消息中心</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+=======
+>>>>>>> a6b7aee (卷卷背单词实现)
+    <view class="content">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <button class="buto" open-type="feedback">
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+  </view>
+<<<<<<< HEAD
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/login/me" hover-class="none">
+      <text class="cuIcon-creativefill text-orange"></text>
+      <text class="text-grey">用户登录</text>
+    </navigator>
+=======
+   <view class="cu-item arrow" wx:if="{{userInfo&&userInfo.avatarUrl}}">
+      <view class="cu-item arrow">
+    <view class="content">
+        <text class="cuIcon-exit text-cyan"></text>
+      
+      <button class="buto" bindtap="loginout">
+        <text class="text-grey">退出登录</text>
+      </button>
+    </view>
+  </view>
+>>>>>>> a6b7aee (卷卷背单词实现)
+  </view>
+</view>
+<view class="cu-tabbar-height"></view>

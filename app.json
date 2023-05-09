@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/login/index",
+    "pages/learn/index",
+<<<<<<< HEAD
+    "pages/statistics/index",
+    "pages/profile/index",
+    "pages/wordDetail/index",
+    "pages/review/index",
+    "pages/about/message/index",
+=======
+    "pages/trans/change/change",
+    "pages/trans/history/history",
+    "pages/trans/index/index",
+    "pages/statistics/index",
+    "pages/profile/index",
+    "pages/newWordList/index",
+    "pages/wordDetail/index",
+    "pages/review/index",
+    "pages/message/index",
+>>>>>>> a6b7aee (卷卷背单词实现)
+    "pages/about/setting/setting",
+    "pages/calendar/index",
+    "pages/wordList/index",
+    "pages/data/index",
+    "pages/about/note/index/index",
+    "pages/about/note/edit/index",
+<<<<<<< HEAD
+    "pages/about/note/create/index"
+    
+=======
+    "pages/about/note/create/index",
+    "pages/about/editor/index",
+    "pages/about/editor/lable/index",
+    "pages/study/index"
+>>>>>>> a6b7aee (卷卷背单词实现)
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#aab4e2",
+    "navigationBarTitleText": "卷卷",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#F7F7FA",
+    "borderStyle": "white",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/asset/images/tabbar/home.png",
+        "selectedIconPath": "/asset/images/tabbar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/statistics/index",
+        "text": "统计",
+        "iconPath": "/asset/images/tabbar/statistics.png",
+        "selectedIconPath": "/asset/images/tabbar/statistics_selected.png"
+      },
+      {
+<<<<<<< HEAD
+=======
+        "pagePath": "pages/study/index",
+        "text": "学习",
+        "iconPath": "/asset/images/tabbar/study.png",
+        "selectedIconPath": "/asset/images/tabbar/study——selected.png"
+      },
+      {
+>>>>>>> a6b7aee (卷卷背单词实现)
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "/asset/images/tabbar/profile.png",
+        "selectedIconPath": "/asset/images/tabbar/profile_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,20 @@
+<view class="cu-list menu card-menu">
+<<<<<<< HEAD
+  <block wx:for="{{words}}" wx:key="index" wx:if="{{type==1}}">
+    <view class="cu-item arrow" data-id="{{item._id}}" bindtap="getInfo">{{item.word}}</view>
+  </block>
+  <block wx:for="{{Unwords}}" wx:key="index" wx:if="{{type!=1}}">
+    <view class="cu-item arrow" data-id="{{item._id}}" bindtap="getInfo">{{item.word}}</view>
+  </block>
+=======
+
+  <block wx:for="{{words}}" wx:key="index">
+    <view class="cu-item arrow" wx:if="{{type=='1'||type=='2'}}" data-id="{{item.wordId}}" bindtap="getInfo">
+    {{item.word}}</view>
+    <view class="cu-item arrow" wx:elif="{{type=='3'||type=='4'}}" data-id="{{item._id}}" bindtap="getInfo">{{item.word}}</view>
+  </block>
+  <!-- <block wx:for="{{Unwords}}" wx:key="index" wx:if="{{type!=1}}">
+    <view class="cu-item arrow" data-id="{{item._id}}" bindtap="getInfo">{{item.word}}</view>
+  </block> -->
+>>>>>>> a6b7aee (卷卷背单词实现)
+</view>

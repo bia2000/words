@@ -1,0 +1,23 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="text-center">
+    <view data-id="{{words[num]}}" class="text-xxxl text-bold">{{words}}</view>
+<<<<<<< HEAD
+    <view>{{usphone}}</view>
+  </view>
+  <view class="margin-top-xl">
+=======
+    <view hidden="{{more}}">/{{usphone}}/</view>
+    <view  class="text-xxxl text-bold"  hidden="{{flag}}">没有更多的喽~</view>
+  </view>
+  <view class="margin-top-xl" hidden="{{more}}">
+>>>>>>> a6b7aee (卷卷背单词实现)
+    <view>
+      <view class="cu-btn round  bg-blue btn-item" bindtap="toDetail">模糊</view>
+    </view>
+    <view>
+      <view class="cu-btn round  bg-blue btn-item margin-top" bindtap="knowWord">认识</view>
+    
+    </view>
+  </view>
+</view>

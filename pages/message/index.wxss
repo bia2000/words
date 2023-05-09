@@ -1,0 +1,10 @@
+/* pages/message/index.wxss */
+.item{
+  border-radius: 40rpx;
+
+}
+.item image{
+  border-radius: 40rpx;
+  height: 300rpx;
+  width: 100%;
+}

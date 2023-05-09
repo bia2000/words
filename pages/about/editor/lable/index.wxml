@@ -1,0 +1,8 @@
+<!--pages/about/editor/lable/index.wxml-->
+<view >
+<view class="bg-white text-xl padding-sm radius margin">
+    <input bindconfirm="insertdata"  placeholder=" 请输入你的标签"></input>
+</view>
+    <text class="margin">自定义标签最多8个字</text>
+    <button class="margin-lg radius bg-white" bindtap="goto">添加</button>
+</view>

@@ -1,0 +1,44 @@
+<!-- index.wxml -->
+<view class="contain">
+    <!-- 写笔记 -->
+    <view class='col'>
+        <view class='item add_box ' bindtap="onNewItem">
+            <image class="add_bg" src="/asset/images/other/add.png" style="width:120rpx;height:120rpx;"></image>
+        </view>
+        <!-- 没有笔记时的提示 -->
+        <block wx:if="{{items.length < 1}}">
+            <view class='tips'>
+                <view class='tips_box'>
+                    <image class='tips_icon' src="/asset/images/other/tips_icon.png" style="width:70rpx;height:70rpx;"></image>
+                </view>
+                <view class='tips_txt'>点此添加新记事本</view>
+            </view>
+        </block>
+    </view>
+    <!-- 笔记列表 -->
+<<<<<<< HEAD
+    <block wx:for="{{items}}" wx:key="*this">
+=======
+    <block wx:for="{{items}}" wx:key="index">
+>>>>>>> a6b7aee (卷卷背单词实现)
+        <view class="col" wx:if="{{ item.state != 3 }}">
+            <view class='item notepad ' data-key="{{item._id}}" bindtap="onEditItem">
+                <view class='content'>
+                    <view class='txt'>{{item.notes.title}}</view>
+                </view>
+<<<<<<< HEAD
+                <view class='bottom'>
+                    <view class='txt'>{{item.year}} {{item.month}} {{item.date}}</view>
+=======
+                <view class='bottom' >
+                    <view class='txt'>{{time[index]}}</view>
+>>>>>>> a6b7aee (卷卷背单词实现)
+                </view>
+            </view>
+        </view>
+    </block>
+<<<<<<< HEAD
+</view>
+=======
+</view>
+>>>>>>> a6b7aee (卷卷背单词实现)

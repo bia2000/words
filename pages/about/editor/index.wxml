@@ -1,0 +1,78 @@
+<view class="">
+    <view class="bg-white info margin-top-sm margin-bottom-sm shadow-lg radius">
+        <view class="biaoti">
+            <!-- <text class="cuIcon-people text-green "></text> -->
+            <image class="img1" src="/asset/images/other/people.png"></image>
+            <text class="_biaoti text-bold text-xxl">基础资料</text>
+            <view class="home-header-line"></view>
+        </view>
+        <form class="former">
+            <view class="cu-form-group">
+                <view class="title">昵称</view>
+                <input bindconfirm="textinput" name='value' placeholder="{{nickname}}"></input>
+            </view>
+            <view class="cu-form-group ">
+                <view class="title">性别</view>
+                <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+                    <view class="picker">{{index?picker[index]:'未知'}}</view>
+                </picker>
+            </view>
+            <view class="cu-form-group">
+                <view class="title">年龄</view>
+                <input bindchange="ageChange" placeholder="{{age}}"></input>
+            </view>
+            <view class="cu-form-group">
+                <view class="title">身高</view>
+                <input bindchange="heightChange" placeholder="{{height}}"></input>
+            </view>
+            <view class="cu-form-group">
+                <view class="title">学校</view>
+                <input bindchange="schoolChange" placeholder="{{school}}"></input>
+            </view>
+            <view class="cu-form-group">
+                <view class="title">地址选择</view>
+                <picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <view class="picker">
+                        {{region[0]}}，{{region[1]}}，{{region[2]}}
+                    </view>
+                </picker>
+            </view>
+        </form>
+    </view>
+    <view class=" bg-white info margin-top-sm margin-bottom-sm shadow-lg radius">
+        <view class="biaoti">
+            <!-- <text class="cuIcon-phone text-green"></text> -->
+            <image src="/asset/images/other/phone.png" class="img1"></image>
+            <text class="_biaoti text-bold text-xxl">联系方式</text>
+            <!-- <view class="home-header-line"></view> -->
+        </view>
+        <form>
+            <view class="cu-form-group ">
+                <text class="cuIcon-weixin text-green"></text>
+                <text>微信</text>
+                <input></input>
+            </view>
+            <view class="cu-form-group ">
+                <text class="cuIcon-weibo text-red"></text>
+                <text>微博</text>
+                <input></input>
+            </view>
+        </form>
+    </view>
+    <view class="  bg-white info margin-top-sm margin-bottom-sm shadow-lg radius">
+        <view class="biaoti">
+            <!-- <text class="cuIcon-phone text-green"></text> -->
+            <image src="/asset/images/other/label.png" class="img1"></image>
+            <text class="_biaoti text-bold text-xxl">个人标签</text>
+            <!-- <view class="home-header-line"></view> -->
+        </view>
+        <view class="cu-capsule label  round margin-sm" wx:for="{{lables}}" wx:key="*this">
+            <view class="cu-tag padding-df text-lg text-bold bg-blue capsule">{{item.value}}</view>
+        </view>
+        <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+            <view class="cu-item arrow">
+                <text class="content text-grey" bindtap="add">新增</text>
+            </view>
+        </view>
+    </view>
+</view>

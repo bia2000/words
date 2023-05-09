@@ -1,0 +1,23 @@
+.img1{
+    width: 60rpx;
+    height: 60rpx;
+}
+.info{
+    border-radius: 30rpx;
+    text-align: right;
+}
+
+.biaoti{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 16rpx;
+    border-bottom: 4rpx dotted #eee;
+}
+.capsule{
+    display: flex;
+    justify-content: flex-start;
+}
+.label{
+  float: left;
+}

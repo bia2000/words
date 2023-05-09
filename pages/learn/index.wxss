@@ -1,0 +1,12 @@
+/**index.wxss**/
+.margin-top-xl{
+  margin-top: 200rpx;
+}
+.btn-item{
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.text-xxxl{
+  font-size: 60rpx;
+}

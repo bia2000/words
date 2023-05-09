@@ -1,0 +1,51 @@
+.container{
+  height: 100vh;
+  box-sizing:border-box
+}
+.search-box{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.selected-box{
+  width: 600rpx;
+}
+.action{
+<<<<<<< HEAD
+=======
+  text-align: center;
+>>>>>>> a6b7aee (卷卷背单词实现)
+  display: inline-block;
+  width: 250rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+}
+.action button{
+  width: 160rpx;
+}
+.btn-box{
+  align-self: end;
+  height: 220rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-item{
+  width: 300rpx;
+  height: 200rpx;
+  font-weight: 600;
+  font-size: 40rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 200rpx;
+  border: 1px solid;
+  border-radius: 40rpx;
+<<<<<<< HEAD
+=======
+}
+.cu-item{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+>>>>>>> a6b7aee (卷卷背单词实现)
+}
